@@ -24,30 +24,56 @@ html {
     height: 46px;
     background-color: #000;
 }
+#nav, .subnav {
+    list-style-type: none;
+}
 
-#nav li {
+#nav > li {
     display: inline-block;
 }
+#nav li {
+    position: relative;
+
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+    
+} 
 #nav li a {
+    display: inline-block;
     padding: 0 24px;
     line-height: 46px;
     text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    display: inline-block;
-
+}
+#nav li:hover .subnav{
+    display: block;
 }
 
-#nav li:hover a {
+#nav > li:hover > a,
+#nav .subnav li:hover {
     background-color: #ccc;
     color: #000;
 }
 #nav .subnav {
- display: none;
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(54, 53, 53, 0.356);
+}
+#nav .subnav a {
+    min-width: 160px;
+    /* text-decoration: none; */
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
 }
 
 #silder {
-
+    min-height: 500px;
+    /* background-color: #333; */
 }
 
 #content {
