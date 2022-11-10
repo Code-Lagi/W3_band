@@ -125,6 +125,35 @@ html {
 #content {
     min-height: 1000px;
 }
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+#content .section-heading{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+#content .section-sub-heading{
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.6;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+#content .about-text{
+    margin: 15px 0;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+
+}
 
 #footer {
 
