@@ -28,6 +28,7 @@ html {
     left: 0;
     right: 0;
     /* width: 100%; */
+    z-index: 1;
 }
 #nav {
     display: inline;
@@ -93,14 +94,36 @@ html {
 }
 
 
-#silder {
+#slider {
     margin-top: 46px;
-    min-height: 1000px;
-    background-color: #333;
+    padding-top: 50%;
+    background: url(/assets/img/chicago.jpg) top center / cover no-repeat;
+    position: relative;
+    /* align-items: center; */
+}
+#slider .text-content{
+    position: absolute;
+    color: #fff;
+    padding: 32px 16px;
+    bottom: 0;
+    text-align: center;
+    /* align-items: center; */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#slider .text-heading{
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#slider .text-description{
+    margin: 15px 0;
 }
 
 #content {
-
+    min-height: 1000px;
 }
 
 #footer {
