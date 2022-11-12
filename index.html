@@ -176,30 +176,29 @@
 
     </div>
 
-<script>
+  <script>
   
-  var modal = document.querySelector(".js-modal")
-  var modalContent = document.querySelector(".js-modal-content")
-  var buyBtns = document.querySelectorAll('.js-buy-btn')
-  var closeBtns = document.querySelectorAll('.js-close-btn')
+    var modal = document.querySelector(".js-modal")
+    var modalContent = document.querySelector(".js-modal-content")
+    var buyBtns = document.querySelectorAll('.js-buy-btn')
+    var closeBtns = document.querySelectorAll('.js-close-btn')
 
-  function showBuyTickets(){
-    modal.classList.add('open')
-  }
-  function closeBuyTickets(){
-    modal.classList.remove('open')
-  }
-  for (const buyBtn of buyBtns) {
-    buyBtn.addEventListener("click", showBuyTickets)    
-  }
-  for (const closeBtn of closeBtns) {
-    closeBtn.addEventListener("click", closeBuyTickets)    
-  }
-  modal.addEventListener('click', closeBuyTickets)
-  modalContent.addEventListener('click', function(event){
-    event.stopPropagation()
-  })
-
-</script>
+    function showBuyTickets(){
+      modal.classList.add('open')
+    }
+    function closeBuyTickets(){
+      modal.classList.remove('open')
+    }
+    for (const buyBtn of buyBtns) {
+      buyBtn.addEventListener("click", showBuyTickets)    
+    }
+    for (const closeBtn of closeBtns) {
+      closeBtn.addEventListener("click", closeBuyTickets)    
+    }
+    modal.addEventListener('click', closeBuyTickets)
+    modalContent.addEventListener('click', function(event){
+      event.stopPropagation()
+    })
+  </script>
   </body>
 </html>
