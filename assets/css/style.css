@@ -275,6 +275,7 @@ html {
     background-color: #000;
     color: #fff;
     display: inline-block;
+    border: none;
 }
 .place-buy-btn:hover{
     color: #000;
@@ -305,7 +306,7 @@ html {
     background-color: rgba(0, 0 , 0, 0.4);
 }    
 .modal.open{
-    display: flex!important;
+    display: flex;
 }
 .modal .modal-content{
     position: relative;
