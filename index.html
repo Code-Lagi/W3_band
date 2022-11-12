@@ -7,11 +7,13 @@
     <title>Music band</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon/music-solid.svg">
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div id="wrapper">
       <div id="header">
+        <!-- Begin nav -->
         <ul id="nav">
           <li><a href="#">Home</a></li>
           <li><a href="#band">Band</a></li>
@@ -30,12 +32,15 @@
             </ul>
           </li>
         </ul>
-        <a id="search" href="#">
-          <i  class="fa-solid fa-magnifying-glass"></i>
-        </a>
-        
+        <!-- End nav -->
+        <div class="search-btn">
+          <a class="text-white" href="#">
+            <i  class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </div>
+        <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
       </div>
-
+        
       <!-- Slideshow Images -->
       <div class="slider">
         <img class="slide-image" src="./assets/img/slideshow/la.jpg" alt="Los Angeles">
@@ -238,6 +243,30 @@
     </div>
 
   <script>
+
+    // Mobile menu function
+    var mobileMenuBtn = document.querySelector('.mobile-menu-btn')
+
+    var header = document.querySelector('#header')
+    function toggleMobileMenu(){
+      if(header.classList.contains('show')){
+        header.classList.remove('show')
+      }else{
+        header.classList.add('show')
+      }
+      
+    }
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu)
+    mobileMenuBtn.addEventListener('click', function(event){
+      event.stopPropagation()
+    })
+
+    document.addEventListener('click',function(){
+      header.classList.remove('show')
+    })
+
+
+    // Slideshow Images Function
     var index = 0
     
     const slideShow = () =>{
@@ -253,6 +282,7 @@
       setTimeout(slideShow, 4000)
     }
     slideShow()
+
 
     // Modal function
     var modal = document.querySelector('.js-modal')

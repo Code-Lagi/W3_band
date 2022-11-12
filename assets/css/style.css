@@ -96,10 +96,12 @@ html {
     right: 0;
     /* width: 100%; */
     z-index: 1;
+    overflow: hidden;
+    /* display: block; */
 
 }
 #nav {
-    display: inline;
+    display: inline-block;
 }
 
 #nav, .subnav {
@@ -149,18 +151,28 @@ html {
     line-height: 38px;
 }
 
-#search{
+.search-btn,
+.mobile-menu-btn{
     float: right;
     color: #fff;
     font-size: 14px;
     line-height: 46px;
     padding: 0 24px;
+    cursor: pointer;
     
 }
-#search:hover{
+
+.search-btn:hover{
     background-color: #f44336;
 }
+.mobile-menu-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
 
+.mobile-menu-btn{
+    display: none;
+}
 
 .slider {
     display: none;   
