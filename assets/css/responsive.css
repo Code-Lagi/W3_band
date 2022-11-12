@@ -10,16 +10,38 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+    #header {
+        overflow: hidden;
+    }
     #header.show{
+        /* overflow: visible; */
         height: auto;
     }
+    #nav {
+        display: block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: rgb(36, 36, 36);
+    }
+    
     #nav > li{
         display: block;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 8px 42px;
+    }
+    #nav .subnav a:hover {
+        color:#000;
     }
     .search-btn {
         display: none;
     }
     .mobile-menu-btn{
         display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }

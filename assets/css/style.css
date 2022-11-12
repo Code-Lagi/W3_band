@@ -96,7 +96,7 @@ html {
     right: 0;
     /* width: 100%; */
     z-index: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* display: block; */
 
 }

@@ -257,6 +257,25 @@
       
     }
     mobileMenuBtn.addEventListener('click', toggleMobileMenu)
+
+    // Auto close menu when click menu item
+    var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+    // console.log(menuItems);
+    for(const menuItem of menuItems) {
+      
+      menuItem.onclick = function(event){
+        var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+        if(isParentMenu){
+          event.preventDefault()
+        }else{
+          toggleMobileMenu()
+        }
+        event.stopPropagation()
+      }
+    
+      
+    }
+
     mobileMenuBtn.addEventListener('click', function(event){
       event.stopPropagation()
     })
