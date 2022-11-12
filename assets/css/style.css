@@ -6,6 +6,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -15,6 +16,8 @@ html {
 3. Màu sắc
 4. Kiểu dáng (kiểu chữ, hình tròn, vuông ...)
 */
+
+/* Common */
 .clear{
     clear: both;
 }
@@ -25,8 +28,60 @@ html {
     color: #009688!important;
 
 }
+.text-center {
+    text-align: center!important;
+}
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+.col-full{
+    width: 100%;
+}
+.col-half {
+    width: 50%;
+}
+.col-third {
+    width: 33.3333%;
+}
+.mt-8{
+    margin-top: 8px!important;
+}
+.mt-16{
+    margin-top: 16px!important;
+}
 
+.btn {
+    color: #fff;
+    background-color: #000;
+    line-height: 1.5;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 16px;
+}
 
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.pull-right{
+    float: right;
+}
+
+/* Main */
 #wrapper {
 
 }
@@ -107,33 +162,42 @@ html {
 }
 
 
-#slider {
+.slider {
+    display: none;   
+    /* display: block; */
     margin-top: 46px;
-    padding-top: 50%;
-    background: url("assets/img/chicago.jpg") top center / cover no-repeat;
     position: relative;
-    /* align-items: center; */
+   
 }
-#slider .text-content{
+.slider.show {
+    display: block;
+   
+}
+.slider .slide-image{
+    width: 100%;
+}
+.slider .text-content{
     position: absolute;
     color: #fff;
     padding: 32px 16px;
-    bottom: 0;
+    bottom: 0%;
     text-align: center;
     /* align-items: center; */
     left: 50%;
     transform: translateX(-50%);
 }
 
-#slider .text-heading{
+.slider .text-heading{
     margin: 10px 0;
     font-size: 24px;
     font-weight: 400;
 }
 
-#slider .text-description{
+.slider .text-description{
     margin: 15px 0;
 }
+
+/* About section */
 
 #content {
     min-height: 1000px;
@@ -142,7 +206,7 @@ html {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding: 64px 16px;
+    padding: 64px 16px 112px;
 }
 #content .section-heading{
     text-align: center;
@@ -169,16 +233,9 @@ html {
 }
 
 #content .members-list{
-    padding: 32px 0;
-    justify-content: space-around;
-    /* overflow: hidden; */
-    
+    padding: 32px 0;    
 }
 
-#content .member-item{
-    float: left;
-    text-align: center;
-}
 #content .member-name{
     margin: 15px 0;
     font-size: 15px;
@@ -223,18 +280,10 @@ html {
 
 /* Places */
 .places-list{
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
+    margin-top: 32px;
+    margin-bottom: 0;
     
 }
-
-.place-item{
-    width: 33.33333%;
-    float: left;
-    padding: 0 8px;
-    
-}
-
 .place-img{
     width: 100%;
     display: block;
@@ -268,34 +317,39 @@ html {
 
 }
 
-.place-buy-btn{
-    margin-bottom: 16px;
-    padding: 8px 16px;
-    text-decoration: none;
-    background-color: #000;
-    color: #fff;
-    display: inline-block;
-    border: none;
-}
-.place-buy-btn:hover{
-    color: #000;
-    background-color: #ccc;
-}
-
-
-
 /* Footer section */
 #footer {
-
+    filter: grayscale(50%);    
+    text-align: center;
 }
 
+.map{
+    width: 100%;
+    
+}
+.social {
+    padding: 64px 16px;
+    opacity: 0.6;
+
+}
+.social > a {
+    color: #000;
+    /* opacity: 0.6; */
+    font-size: 24px;
+}
+.social a:hover{
+    opacity: 0.3;
+}
+.copyright {
+    font-size: 15px;
+}
 /* modal */
 .modal {
     /* display: block; */
     display: none;
     /* display: flex; */
     align-items: center;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     top: 0;
     right: 0;
@@ -322,7 +376,7 @@ html {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 24px;
+    font-size: 15px;
     padding: 12px 16px;
     user-select: none;
     cursor: pointer;
@@ -396,6 +450,30 @@ html {
     font-size: 15px;
     line-height: 1.5;
 } 
+
+.contact-content{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form {
+    font-size: 15px;
+}
+.contact-form .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+
+
 
 @keyframes modalFadeIn{
     from{
