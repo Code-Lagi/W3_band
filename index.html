@@ -92,7 +92,7 @@
                   <h3 class="place-heading">New York</h3>
                   <p class="place-time">Fri 27 Nov 2016</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <a href="" class="place-buy-btn js-buy-btn">Buy Tickets</a>
                 </div>
               </div>
 
@@ -102,7 +102,7 @@
                   <h3 class="place-heading">Paris</h3>
                   <p class="place-time">Sat 28 Nov 2016</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <a href="" class="place-buy-btn js-buy-btn">Buy Tickets</a>
                 </div>
               </div>
 
@@ -112,7 +112,10 @@
                   <h4 class="place-heading">San Francisco</h4>
                   <p class="place-time">Sun 29 Nov 2016</p>
                   <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <a href="" class="place-buy-btn js-buy-btn">Buy Tickets
+
+
+                  </a>
                 </div>
               </div>
               <div class="clear"></div>
@@ -130,5 +133,73 @@
       </div>
       <div id="footer"></div>
     </div>
+
+    <div class="modal js-modal">
+      <div class="modal-content js-modal-content">
+
+        <header class="header">
+          <span 
+            class="close js-close-btn"
+            
+          >
+            x
+          </span>
+          <h2 class="title">
+            <i class="fa-solid fa-suitcase"></i>
+            Tickets
+          </h2>
+        </header>
+        <div class="modal-body">
+          <p class="label">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Tickets, $15 per person
+          </p>
+          <input class="modal-input" type="text" placeholder="How many?">
+          
+          <p class="label">
+            <i class="fa-solid fa-user"></i>
+            Send To
+          </p>
+          <input class="modal-input" type="text" placeholder="Enter email">
+          
+          <button class="pay">PAY <i class="fa-solid fa-check"></i></i></button>
+          <button 
+            class="close-btn js-close-btn" 
+            
+          >
+            Close 
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <p class="help">Need <a class="text-blue" href="#">helps?</a></p>
+        </div>
+      </div>
+
+    </div>
+
+<script>
+  
+  var modal = document.querySelector(".js-modal")
+  var modalContent = document.querySelector(".js-modal-content")
+  var buyBtns = document.querySelectorAll('.js-buy-btn')
+  var closeBtns = document.querySelectorAll('.js-close-btn')
+
+  function showBuyTickets(){
+    modal.classList.add('open')
+  }
+  function closeBuyTickets(){
+    modal.classList.remove('open')
+  }
+  for (const buyBtn of buyBtns) {
+    buyBtn.addEventListener("click", showBuyTickets)    
+  }
+  for (const closeBtn of closeBtns) {
+    closeBtn.addEventListener("click", closeBuyTickets)    
+  }
+  modal.addEventListener('click', closeBuyTickets)
+  modalContent.addEventListener('click', function(event){
+    event.stopPropagation()
+  })
+
+</script>
   </body>
 </html>
