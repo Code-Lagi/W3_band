@@ -10,6 +10,14 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+   
+    .col-half {
+        width: 100%;
+    }
+    .col-third{
+        width: 100%;
+        margin-bottom: 16px;
+    }
     #header {
         overflow: hidden;
     }
@@ -43,5 +51,8 @@
         position: absolute;
         right: 0;
         top: 0;
+    }
+    .contact-info {
+        padding-bottom: 16px;
     }
 }
