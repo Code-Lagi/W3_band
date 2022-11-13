@@ -10,13 +10,10 @@
 
 /* Mobile */
 @media (max-width: 740px) {
-   
-    .col-half {
-        width: 100%;
-    }
+    .s-ful-width,
+    .col-half,
     .col-third{
         width: 100%;
-        margin-bottom: 16px;
     }
     #header {
         overflow: hidden;
