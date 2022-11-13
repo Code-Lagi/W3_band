@@ -55,4 +55,12 @@
     .contact-info {
         padding-bottom: 16px;
     }
+    .modal {
+        top: -260px;
+    }
+    .modal .modal-content{
+        margin: 0 10px;
+    }
+        
+    
 }
